@@ -1,0 +1,33 @@
+.sidebar {
+  border-right: 1px solid gray;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  padding-left: 2%;
+}
+
+nav p {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 32px 0px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+ul li span {
+  width: 32px;
+}

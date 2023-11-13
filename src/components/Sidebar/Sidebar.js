@@ -1,3 +1,5 @@
+import styles from "./sidebar.module.css";
+
 const Sidebar = () => {
   const sidebarItems = [
     {
@@ -37,7 +39,7 @@ const Sidebar = () => {
 
   console.log(sidebarItems);
   return (
-    <nav className="sidebar col-sm-1 col-xl-2">
+    <nav className={`${styles.sidebar} col-sm-1 col-xl-2`}>
       <p>Uglygram</p>
       <ul>{listItems}</ul>
     </nav>
