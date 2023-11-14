@@ -1,8 +1,8 @@
 import styles from "./contentArea.module.css";
 
-const ContentArea = ({ children }) => {
+const ContentArea = ({ children, classNames }) => {
   return (
-    <div class="row offset-sm-1 offset-xl-2 col-sm-10 col-xl-7 justify-center">
+    <div className={`offset-sm-1 offset-xl-2 ${classNames}`} >
       {children}
     </div>
   );
