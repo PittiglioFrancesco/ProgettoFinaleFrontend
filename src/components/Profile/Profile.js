@@ -1,10 +1,14 @@
 import ContentArea from "../ContentArea/ContentArea";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Profile = () => {
   return (
-    <ContentArea>
-      <h1>Profilo</h1>
-    </ContentArea>
+    <>
+    <Sidebar />
+      <ContentArea>
+        <h1>Profilo</h1>
+      </ContentArea>
+    </>
   );
 };
 

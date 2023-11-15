@@ -1,4 +1,4 @@
-import Card from "../utils/Card/Card";
+import Card from "../utils/Post/Post";
 import styles from "./Posts.module.css";
 
 const postsData = [

@@ -8,7 +8,7 @@
 }
 
 .no-wrap {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .d-flex {
@@ -28,7 +28,11 @@
 }
 
 .height-100 {
-    height: 100%;
+  height: 100%;
+}
+
+.offset-3 {
+  margin-left: calc(3 / 12 * 100%);
 }
 
 .col-1 {
@@ -40,11 +44,11 @@
 }
 
 .col-3 {
-    width: calc(3 / 12 * 100%);
-  }
+  width: calc(3 / 12 * 100%);
+}
 
 .col-4 {
-    width: calc(4 / 12 * 100%);
+  width: calc(4 / 12 * 100%);
 }
 
 .col-5 {
@@ -56,8 +60,8 @@
 }
 
 .col-7 {
-    width: calc(7 / 12 * 100%);
-  }
+  width: calc(7 / 12 * 100%);
+}
 
 .col-8 {
   width: calc(8 / 12 * 100%);
