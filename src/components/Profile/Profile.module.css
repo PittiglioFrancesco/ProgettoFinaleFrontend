@@ -1,0 +1,18 @@
+.img-container {
+  padding: 0 1px;
+  padding-bottom: 1px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  background-position: center;
+}

@@ -78,7 +78,7 @@ const Register = () => {
         </Card>
       </div>
       <p className="row justify-center">
-        Sei già iscritto? <Link to="/signup">Login</Link>
+        Sei già iscritto? <Link to="/login">Login</Link>
       </p>
     </div>
   );

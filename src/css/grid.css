@@ -31,6 +31,10 @@
   height: 100%;
 }
 
+.offset-2 {
+  margin-left: calc(2 / 12 * 100%);
+}
+
 .offset-3 {
   margin-left: calc(3 / 12 * 100%);
 }

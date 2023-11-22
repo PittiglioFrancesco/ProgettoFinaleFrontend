@@ -1,5 +1,5 @@
 import Card from "../utils/Post/Post";
-import styles from "./Posts.module.css";
+import"./Posts.module.css";
 
 const postsData = [
   {
