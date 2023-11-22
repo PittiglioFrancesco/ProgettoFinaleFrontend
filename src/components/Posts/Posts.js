@@ -21,6 +21,7 @@ const Posts = () => {
   useEffect(() => {
     onloadGetPosts();
   }, []);
+  console.log(postsData)
 
   const posts = postsData.map((postData) => {
     return (

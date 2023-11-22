@@ -5,13 +5,12 @@ import { useAuth } from "../utils/AuthContext";
 
 const InfoRow = ({ styles, profileId, date }) => {
   const { user } = useAuth();
-  console.log(user);
 
   const [profileInfo, setProfileInfo] = useState({});
 
   const onLoadGetProfileInfo = async () => {
     try {
-      const data = await readProfileById(profileId);
+      const data = await readProfileById(+profileId);
       setProfileInfo(data);
     } catch (error) {
       console.error(error);

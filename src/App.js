@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import "./App.css";
 import { AuthProvider } from "./components/utils/AuthContext";
 import "./css/grid.css";
@@ -12,6 +12,7 @@ import Login from "./components/Login/Login";
 import PrivateRoutes from "./PrivateRoutes";
 
 function App() {
+  const { profileId } = useParams();
   return (
     <AuthProvider>
       <div className="row">
@@ -20,7 +21,7 @@ function App() {
           <Route element={<PrivateRoutes />}>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/explore" element={<Explore />} />
-            <Route exact path="/profile" element={<Profile />} />
+            <Route path="/profile/:profileId" element={<Profile />} />
           </Route>
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />

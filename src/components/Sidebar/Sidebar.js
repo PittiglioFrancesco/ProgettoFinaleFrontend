@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./sidebar.module.css";
+import { useAuth } from "../utils/AuthContext";
 
 const Sidebar = () => {
+  const { user } = useAuth();
+
   const sidebarItems = [
     {
       name: "Home",
@@ -26,7 +29,7 @@ const Sidebar = () => {
     {
       name: "Profilo",
       icon: <i className="fa-solid fa-user" />,
-      path: "/profile",
+      path: `/profile/${user.id}`,
     },
     {
       name: "Altro",

@@ -1,6 +1,25 @@
+import { useEffect, useState } from "react";
+
 import styles from "./ForYou.module.css";
+import { readFirstFiveProfiles } from "../../config";
+import ForYouProfile from "./ForYouProfile";
 
 const ForYou = () => {
+  const [profilesInfo, setProfilesInfo] = useState([]);
+
+  const onLoadGetProfilesInfo = async () => {
+    try {
+      const data = await readFirstFiveProfiles();
+      setProfilesInfo(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    onLoadGetProfilesInfo();
+  }, []);
+
   return (
     <div className={`${styles["for-you"]} col-xl-3 justify-center`}>
       <div className={`${styles["right-sidebar"]} col-6`}>
@@ -8,20 +27,7 @@ const ForYou = () => {
           <p>Suggeriti per te</p>
           <p>Mostra Tutti</p>
         </div>
-        <ul>
-          <li className="d-flex justify-space-between">
-            <div className="d-flex">
-              <div className={styles.icon}></div>
-              <div>
-                <p className={styles.username}>username</p>
-                <p className={styles.followed}>Seguito da</p>
-              </div>
-            </div>
-            <div className={styles.link}>
-              <a href="">Segui</a>
-            </div>
-          </li>
-        </ul>
+        <ForYouProfile styles={styles} profilesInfo={profilesInfo} />
       </div>
     </div>
   );

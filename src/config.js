@@ -49,4 +49,26 @@ async function readProfileById(id) {
   }
 }
 
-export { loginCall, verifyCall, getAllPosts, readProfileById };
+async function readFirstFiveProfiles() {
+    const readFfEndpoint = endpoint + "profile/firstfive";
+
+  try {
+    const res = await axios.get(readFfEndpoint);
+    return res.data;
+  } catch (error) {
+    return error;
+  }
+}
+
+async function readAllPostsOfProfile(id) {
+  const readAPOPEndpoint = endpoint + "profile/profileposts";
+
+try {
+  const res = await axios.get(readAPOPEndpoint, {id: id});
+  return res.data;
+} catch (error) {
+  return error;
+}
+}
+
+export { loginCall, verifyCall, getAllPosts, readProfileById, readFirstFiveProfiles, readAllPostsOfProfile };
