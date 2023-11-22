@@ -1,5 +1,5 @@
 const calculatePostTime = (postTimeMs, nowTimeMs) => {
-  const postDate = new Date(postTimeMs);
+  const postDate = new Date(+postTimeMs);
   const nowTimeDate = new Date(nowTimeMs);
   if (nowTimeDate.getFullYear() !== postDate.getFullYear()) {
     const difference = nowTimeDate.getFullYear() - postDate.getFullYear();

@@ -11,12 +11,13 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     setLoading(false);
   }, []);
+  
 
-  const loginUser = (loginData) => {
+  const loginUser = async (loginData) => {
     setLoading(true);
     try {
-        let account = loginCall(loginData);
-        sessionStorage.setItem("token", account.token)
+        let account = await loginCall(loginData);
+        sessionStorage.setItem("token", account.token);
         setUser(account);
     } catch (error) {
         console.error(error);

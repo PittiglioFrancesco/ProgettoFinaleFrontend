@@ -9,19 +9,44 @@ async function loginCall(loginData) {
     const res = await axios.put(loginEndpoint, loginData);
     return res.data;
   } catch (error) {
-    console.log("errorConfig", error);
+    return error;
   }
 }
 
 async function verifyCall(token) {
-    const loginEndpoint = endpoint + "verify";
+    const verifyEndpoint = endpoint + "verify";
 
   try {
-    const res = await axios.get(loginEndpoint, token);
+    const res = await axios.get(verifyEndpoint, token);
     return res.data;
   } catch (error) {
-    console.log("errorConfig", error);
+    return error;
   }
 }
 
-export { loginCall, verifyCall };
+async function getAllPosts(token) {
+    axios.defaults.headers.common = {
+        'Authorization': `Bearer ${token}`
+      };
+    const getPostsEndpoint = endpoint + "post";
+
+  try {
+    const res = await axios.get(getPostsEndpoint);
+    return res.data;
+  } catch (error) {
+    return error;
+  }
+}
+
+async function readProfileById(id) {
+    const readprofileEndpoint = endpoint + "profile/" + id;
+
+  try {
+    const res = await axios.get(readprofileEndpoint);
+    return res.data;
+  } catch (error) {
+    return error;
+  }
+}
+
+export { loginCall, verifyCall, getAllPosts, readProfileById };

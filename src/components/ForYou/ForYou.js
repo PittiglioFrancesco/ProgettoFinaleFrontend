@@ -2,22 +2,22 @@ import styles from "./ForYou.module.css";
 
 const ForYou = () => {
   return (
-    <div class={`${styles["for-you"]} col-xl-3 justify-center`}>
-      <div class={`${styles["right-sidebar"]} col-6`}>
-        <div class={styles["for-you"]}>
+    <div className={`${styles["for-you"]} col-xl-3 justify-center`}>
+      <div className={`${styles["right-sidebar"]} col-6`}>
+        <div className={styles["for-you"]}>
           <p>Suggeriti per te</p>
           <p>Mostra Tutti</p>
         </div>
         <ul>
           <li className="d-flex justify-space-between">
             <div className="d-flex">
-              <div class={styles.icon}></div>
+              <div className={styles.icon}></div>
               <div>
-                <p class={styles.username}>username</p>
-                <p class={styles.followed}>Seguito da</p>
+                <p className={styles.username}>username</p>
+                <p className={styles.followed}>Seguito da</p>
               </div>
             </div>
-            <div class={styles.link}>
+            <div className={styles.link}>
               <a href="">Segui</a>
             </div>
           </li>
